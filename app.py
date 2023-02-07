@@ -3,6 +3,7 @@ import plotly.express as px
 import pandas as pd
 
 app = Dash(__name__)
+server = app.server
 
 # Import data
 df = pd.read_csv("LMSM360_9.csv")
