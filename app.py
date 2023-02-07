@@ -38,4 +38,4 @@ def update_graph(option_degree):
     fig.write_html("3DLidarScannerPlotlyDash.html")
     return container, fig
 
-app.run_server(debug=True)
+app.run_server(debug=False)
