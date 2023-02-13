@@ -10,6 +10,7 @@ df = pd.read_csv("LMSM360_9.csv")
 
 app.layout = html.Div([
     html.H1("Lidar Scanner", style = {'text-align': 'center'}),
+    html.A(html.Button('Refresh Data'),href='/'),
     dcc.Dropdown(id = "Vertical_Increment",
         options = [
             {"label": "1.8", "value": 1.8},
