@@ -30,7 +30,7 @@ def update_graph(num):
         raise PreventUpdate
     else:
         size1 = []
-        for i in range (2433):
+        for i in range (988):
             size1.append(0.000001)
         fig = px.scatter_3d(df, 
             x='X', y='Y', z='Z',
