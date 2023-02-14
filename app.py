@@ -37,8 +37,9 @@ app.layout = html.Div([
 def update_graph(option_degree, num):
     
     container = "The vertical increment chosen was: {}".format(option_degree)
+    rangeLoop = int(df.size/3)
     size1 = []
-    for i in range (2433):
+    for i in range (rangeLoop):
         size1.append(0.000001)
         
     if num ==0:
