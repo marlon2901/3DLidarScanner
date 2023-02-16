@@ -2,9 +2,6 @@ from dash import Dash, dcc, html, Input, Output
 import plotly.express as px
 import pandas as pd
 
-# Import data 
-df = pd.read_csv('https://raw.githubusercontent.com/marlon2901/3DLidarScanner/main/LMSM360_9.csv')
-
 app = Dash(__name__)
 
 app.layout = html.Div([
@@ -27,6 +24,8 @@ app.layout = html.Div([
 )
 def update_graph(option_degree):
     
+    # Import data 
+    df = pd.read_csv('https://raw.githubusercontent.com/marlon2901/3DLidarScanner/main/LMSM360_9.csv')
     container = "The vertical increment chosen was: {}".format(option_degree)
     rangeLoop = int(df.size /3)
     size1 = []
@@ -35,7 +34,7 @@ def update_graph(option_degree):
     fig = px.scatter_3d(df, 
         x='X', y='Y', z='Z',
         color="X", size = size1)
-    fig.write_html("3DLidarScannerPlotlyDash.html")
+    #fig.write_html("3DLidarScannerPlotlyDash.html")
     return container, fig
 
 app.run_server(debug=True)
