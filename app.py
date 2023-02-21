@@ -26,7 +26,7 @@ app.layout = layout_function
 )
 def update_graph(n_clicks):
     
-    df = pd.read_csv("https://raw.githubusercontent.com/marlon2901/3DLidarScanner/main/LMSM360_9.csv")
+    df = pd.read_csv("LMSM360_9.csv")
     rangeLoop = int(df.size/3)
     print(df.size)
     size1 = []
