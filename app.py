@@ -5,14 +5,12 @@ import plotly.express as px
 import pandas as pd
 
 app = Dash(__name__)
-# csvPath = "https://raw.githubusercontent.com/marlon2901/3DLidarScanner/main/LMSM360_9.csv"
-csvPath = "LMSM360_9.csv"
-df = pd.read_csv(csvPath)
+#csvPath = "https://raw.githubusercontent.com/marlon2901/3DLidarScanner/main/LMSM360_9.csv"
 
 def layout_function():
     
     global df
-    df = pd.read_csv(csvPath)
+    df = pd.read_csv("LMSM360_9.csv")
     print (df)
     
     return html.Div([
