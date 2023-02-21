@@ -1,6 +1,4 @@
 from dash import Dash, dcc, html, Input, Output
-from dash.exceptions import PreventUpdate
-from dash.dependencies import Output, Input
 import plotly.express as px
 import pandas as pd
 
@@ -11,7 +9,6 @@ def layout_function():
     
     global df
     df = pd.read_csv("LMSM360_9.csv")
-    print (df)
     
     return html.Div([
         html.H1("Lidar Scanner", style = {'text-align': 'center'}),
