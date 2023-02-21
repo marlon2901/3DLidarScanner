@@ -4,11 +4,9 @@ import pandas as pd
 
 app = Dash(__name__)
 #csvPath = "https://raw.githubusercontent.com/marlon2901/3DLidarScanner/main/LMSM360_9.csv"
+df = pd.read_csv("https://raw.githubusercontent.com/marlon2901/3DLidarScanner/main/LMSM360_9.csv")
 
 def layout_function():
-    
-    global df
-    df = pd.read_csv("LMSM360_9.csv")
     
     return html.Div([
         html.H1("Lidar Scanner", style = {'text-align': 'center'}),
@@ -34,6 +32,8 @@ app.layout = layout_function
 )
 def update_graph(option_degree):
     
+    global df
+    df = pd.read_csv("https://raw.githubusercontent.com/marlon2901/3DLidarScanner/main/LMSM360_9.csv")
     container = "The vertical increment chosen was: {}".format(option_degree)
     rangeLoop = int(df.size/3)
     print(df.size)
