@@ -5,7 +5,7 @@ import plotly.express as px
 import pandas as pd
 
 app = Dash(__name__)
-
+df = pd.read_csv("https://raw.githubusercontent.com/marlon2901/3DLidarScanner/main/LMSM360_9.csv")
 def layout_function():
     
     return html.Div([
