@@ -27,15 +27,15 @@ app.layout = layout_function
 def update_graph(n_clicks):
     
     df = pd.read_csv("https://raw.githubusercontent.com/marlon2901/3DLidarScanner/main/LMSM360_9.csv")
-    rangeLoop = int(df.size/3)
-    print(df.size)
-    size1 = []
-    for i in range (rangeLoop):
-        size1.append(0.000001)
+    #rangeLoop = int(df.size/3)
+    #print(df.size)
+    #size1 = []
+    #for i in range (rangeLoop):
+    #    size1.append(0.000001)
 
     fig = px.scatter_3d(df, 
     x='X', y='Y', z='Z',
-    color='X', size = size1)
+    color='X')
     #   fig.write_html("3DLidarScannerPlotlyDash.html")
     return fig
 
